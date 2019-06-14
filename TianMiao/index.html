@@ -3,6 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<link rel="icon" type="image/x-icon" href="img/TB1XlF3RpXXXXc6XXXXXXXXXXXX-16-16.png"/>
 		<title>天猫国际官方直营-理想生活上天猫</title>
 		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -24,7 +25,7 @@
 				<div class="clear"></div>
 				<div class="top-nav-right">
 					<ul>
-						<li>
+						<li id="myTB" class="myTB">
 							<a href="#">我的淘宝</a>
 							<img src="iconfont-imgs/sanjiao1.png" />
 						</li>
@@ -32,22 +33,22 @@
 							<i class="iconfont" style="color:#ff0036; font:16px;">&#xf003f;</i>
 							<a href="#">购物车0件</a>
 						</li>
-						<li>
+						<li id="myCollect" class="myCollect">
 							<a href="#">收藏夹</a>
 							<img src="iconfont-imgs/sanjiao1.png" />
 						</li>
 						<li>|</li>
-						<li>
+						<li id="phone" class="phone">
 							<i class="iconfont" style="color:#ff0036">&#x3448;</i>
 							<a href="#">手机版</a>
 						</li>
 						<li>
 							<a href="#">淘宝网</a>
 						</li>
-						<li>
+						<li id="merchant" class="merchant">
 							<a href="#">商家支持</a>
 						</li>
-						<li>
+						<li id="webNav" class="webNav">
 							<div class="web-nav">
 								<i class="iconfont" style="color: #ff0036">&#x344a;</i>
 								<span>网站导航</span>
@@ -55,6 +56,69 @@
 							</div>
 						</li>
 					</ul>
+				</div>
+				<table></table>
+				<div class="subset">
+					<div class="subset1" id="subset1">
+						<ul>
+							<li><a href="#">已买到的宝贝</a></li>
+							<li><a href="#">已买到的宝贝</a></li>
+						</ul>
+					</div>
+					<div class="subset2" id="subset2">
+						<ul>
+							<li><a href="#">收藏的宝贝</a></li>
+							<li><a href="#">收藏的店铺</a></li>
+						</ul>
+					</div>
+					<div class="subset3" id="subset3">
+						<img src="img/phonErWeiMa.png"/>
+					</div>
+					<div class="subset4" id="subset4">
+						<ul>
+							<li>
+								<h3>商家:</h3>
+								<a href="#">商家中心</a>
+								<a href="#">商家入驻</a>
+								<a href="#">运营服务</a>
+								<a href="#">商家工具</a>
+								<a href="#">商家规则</a>
+								<a href="#">天猫智库</a>
+								<a href="#">喵言喵语</a>
+							</li>
+							<li>
+								<h3>帮助：</h3>
+								<a href="#">帮助中心</a>
+							</li>
+						</ul>
+					</div>
+					<div class="subset5" id="subset5">
+						<table width="350px">
+							<tr>
+								<td colspan="5"><h3>热点推荐 Hot</h3></td>
+							</tr>
+							<tr>
+								<td><a href="#">天猫超市</a></td>
+								<td><a href="#">喵生鲜</a></td>
+								<td><a href="#">科技新品</a></td>
+								<td><a href="#">女装新品</a></td>
+								<td><a href="#">库玩街</a></td>
+							</tr>
+							<tr>
+								<td><a href="#">内衣新品</a></td>
+								<td><a href="#">试美妆</a></td>
+								<td><a href="#">运动新品</a></td>
+								<td><a href="#">时尚先生</a></td>
+								<td><a href="#">精明妈咪</a></td>
+							</tr>
+							<tr>
+								<td><a href="#">吃乐会</a></td>
+								<td><a href="#">企业采购</a></td>
+								<td><a href="#">会员积分</a></td>
+								<td colspan="2"><a href="#">天猫国际</a></td>
+							</tr>
+						</table>
+					</div>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -316,9 +380,9 @@
 			</div>
 			<!-- 主体的中间部分 -->
 			<div class="main-body">
-				<!--美容护肤-->
 				<table></table>
 				<div class="title"></div>
+				<!--美容护肤-->
 				<div class="skin">
 					<table></table>
 					<div class="left-nav">
@@ -2050,6 +2114,7 @@
 		<div class="footer">
 			<div class="footer-contant">
 				<table></table>
+				<!-- 第一行 -->
 				<div class="first-row">
 					<ul>
 						<li>
@@ -2082,6 +2147,7 @@
 					</ul>
 				</div>
 				<div class="clear"></div>
+				<!-- 第二行 -->
 				<div class="second-row">
 					<ul>
 						<li>
@@ -2150,14 +2216,16 @@
 					</ul>
 				</div>
 				<div class="clear"></div>
+				<!-- 第三行 -->
 				<div class="third-row">
 					<ul>
-						<li>增值电信业务经营许可证： 浙B2-20110446</li>
-						<li>网络文化经营许可证：浙网文[2015]0295-065</li>
+						<li>增值电信业务经营许可证： <a href="#">浙B2-20110446</a></li>
+						<li>网络文化经营许可证：<a href="#">浙网文[2015]0295-065</a></li>
 						<li>互联网医疗保健信息服务 审核同意书 浙卫网审 【2014】 6号</li>
 					</ul>
 				</div>
 				<div class="clear"></div>
+				<!--最后-->
 				<div class="fourth-row">
 					<ul>
 						<li>互联网</li>
@@ -2165,6 +2233,9 @@
 				</div>
 			</div>
 		</div>
+
+
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
