@@ -1,48 +1,89 @@
-* {
-	margin: 0;
-	padding: 0;
+@charset "utf-8";
+
+/*设置默认字体*/
+
+body {
+	font: 12px/1.5 "微软雅黑", Arial, Tahoma, Helvetica, \5b8b\4f53, sans-serif;
 }
 
-html,
-body {
-	width: 100%;
-	font-family: "微软雅黑";
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	font-size: 100%;
 }
+
+address,caption,cite,em,code,dfn,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+/*清除内外边距*/
+
+html,body,div,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,object,code,em,span,var,legend,button,input,textarea,th,td,a,img,header,footer,nav,aside,audio,datalist,section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+
+/*重置列表*/
+
+ul,ol,ul li,ol li {
+	list-style: none;
+}
+
+form label {
+	cursor: pointer;
+}
+
+input,button,select,textarea {
+	font-family: inherit;
+	font-size: 100%;
+	outline: none;
+}
+
+textarea {
+	resize: none
+}
+
+input {
+	vertical-align: middle;
+}
+
+
+/*重置图片元素*/
+
+img {
+	border: 0;
+}
+
+
+/*重置表格*/
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*重置超链接*/
 
 a {
 	text-decoration: none;
 }
 
-ul {
-	list-style: none;
-}
 
-i,
-em {
-	font-style: normal;
-}
+/*--清除浮动*/
 
 .clear {
 	clear: both;
 }
 
-.top-nav,
-.header,
-.menu,
-.main-header-content,
-.main-header-bottom-img,
-.shop,
-.skin,
-.home,
-.personal-care,
-.baby,
-.fashion,
-.food,
-.health,
-.drink,
-.main-body-bottom,
-.main-footer-contant,
-.footer-contant {
+
+/*通用宽度设置*/
+
+.top-nav,.header,.menu,.main-header-content,.main-header-bottom-img,.shop,.skin,.home,.personal-care,.baby,.fashion,.food,.health,.drink,.main-body-bottom,.main-footer-contant,.footer-contant {
 	width: 1190px;
 	margin: 0 auto;
 	position: relative;
@@ -53,13 +94,15 @@ em {
 
 .top {
 	width: 100%;
+	min-width: 1190px;
 	height: 26px;
 	background-color: #f2f2f2;
+	border-bottom: 1px solid #EEEEEE;
+	position: relative;
 }
 
 .top>.top-nav {
-	height: 26px;
-	position: relative;
+	height: 26px;	
 	line-height: 26px;
 	background-color: #f2f2f2;
 	color: #999999;
@@ -71,7 +114,7 @@ em {
 }
 
 .top-nav>.top-nav-left>span {
-	padding-right: 10px;
+	padding-right: 20px;
 }
 
 .top-nav>.top-nav-right img {
@@ -83,40 +126,200 @@ em {
 	color: #999999;
 }
 
+.top-nav>.top-nav-left>span>a:hover,
+.top-nav-right>ul>li a:hover {
+	color: #ff0036;
+	text-decoration: underline;
+}
+
 .top-nav-right {
-	height: 26px;
 	position: absolute;
 	top: 0;
-	right: 0px;
+	right: 0;
 }
 
 .top-nav-right>ul>li {
 	float: left;
-	padding-left: 4px;
-	padding-right: 4px;
+	padding: 0 10px;
 	text-align: left;
-	
 }
 
 .top-nav-right>ul>li:nth-child(4) {
-	padding-left: 6px;
-	padding-right: 6px;
+	padding: 0 10px;
 	border-style: none;
 }
 
-.myTB, .myCollect, .phone, .merchant, .webNav {
+.trigon {
+	border-color: transparent;
+	border-bottom-color: #999999;
+	border-width: 5px;
+	border-style: solid;
+	/* width: 26px;
+	height: 26px; 
+	text-align: center;
+	line-height: 26px;*/
+	position: absolute;
+	top: 6px;
+	right: 6px;
+}
+
+.myTB {
+	width: 84px;
 	box-sizing: border-box;
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
-	border-bottom: 1px solid transparent;
+	position: relative;
 }
 
-.Hover {
-	display: inline-block;
+.myTB>ul {
 	background-color: #FFFFFF;
 	border-left: 1px solid #EEEEEE;
 	border-right: 1px solid #EEEEEE;
-	/*border-bottom: 1px solid #EEEEEE;*/
+	border-bottom: 1px solid #eeeeee;
+	width: 95px;
+	position: absolute;
+	top: 27px;
+	left: -1px;
+	text-align: center;
+	display: none;
+}
+
+
+.myCollect {
+	width: 70px;
+	box-sizing: border-box;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	position: relative;
+}
+
+
+.myCollect>ul {
+	background-color: #FFFFFF;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #eeeeee;
+	width: 80px;
+	position: absolute;
+	top: 27px;
+	left: -1px;
+	text-align: center;
+	display: none;
+}
+
+.phone {
+	width: 75px;
+	box-sizing: border-box;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	position: relative;
+}
+
+#phone>ul>li>div {
+	width: 165px;
+	height: 210px;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	border-top: 1px solid #EEEEEE;
+	position: absolute;
+	top: 27px;
+	left: -37px;
+	display: none;
+}
+#phone>ul>li img {
+	width: 145px;
+	margin: 10px;
+}
+#phone>ul>li>div::before {
+	content: "";
+	display: block; 
+	border-color: transparent;
+	border-bottom-color: #fff;
+	border-width: 5px;
+	border-style: solid;
+	width: 0;
+	height: 0;
+	position: absolute;
+	right: 50%;
+	bottom: 100%;
+}
+.merchant {
+	width: 75px;
+	box-sizing: border-box;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	position: relative;
+}
+
+.merchant>ul {
+	background-color: #FFFFFF;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #eeeeee;
+	width: 100px;
+	position: absolute;
+	top: 27px;
+	right: -1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	display: none;
+}
+.merchant>ul>li {
+	border-bottom: 1px dashed #000000;
+}
+
+.webNav {
+	box-sizing: border-box;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	position: relative;
+}
+
+.webNav ul{
+	width: 1000px;
+	height: 220px;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	position: absolute;
+	top: 27px;
+	right: 0;
+	display: none;
+	z-index: 99;
+}
+.webNav ul li table {
+	float: left;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+.webNav ul li table:not(:last-child) {
+	border-right: 1px solid #EEEEEE;
+}
+.web-nav {
+	width: 70px;
+}
+.myTB:hover,
+.myCollect:hover,
+.merchant:hover,
+.webNav:hover {
+	background-color: #fff;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid transparent;
+}
+
+.myTB:hover ul,
+.myCollect:hover ul,
+.merchant:hover ul,
+#phone:hover ul div,
+.webNav:hover ul {
+	display: block;
+	z-index: 999;
+	background-color: #fff;
 }
 
 .top-nav-right>ul>li:nth-child(4):hover {
@@ -124,102 +327,39 @@ em {
 	background-color: transparent;
 }
 
-.top-nav>.top-nav-left>span>a:hover,
-.top-nav-right>ul>li>a:hover {
-	color: #ff0036;
-	text-decoration: underline;
-}
-
-.web-nav {
-	float: right;
-}
-
-.web-nav>span:hover {
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-
-/*最顶部导航的子选项*/
-
-.subset>.subset1>ul>li>a,
-.subset>.subset2>ul>li>a {
-	color: #999999;
-	padding-left: 5px;
-}
-
-.subset>.subset1,
-.subset>.subset2,
-.subset>.subset3,
-.subset>.subset4,
-.subset>.subset5>table {
-	background-color: #FFFFFF;
-	border-left: 1px solid #EEEEEE;
-	border-right: 1px solid #EEEEEE;
-	border-bottom: 1px solid #EEEEEE;
-	z-index: 9;
-}
-
-#subset1,
-#subset2,
-#subset3,
-#subset4,
-#subset5,
-#prev,
-#next {
-	display: none;
-}
-
-.subset>.subset1 {
-	width: 85px;
+.trigon {
+	border-color: transparent;
+	border-top-color: #999999;
+	border-width: 3px;
+	border-style: solid;
+	/* width: 0px;
+	height: 0px;  */
 	position: absolute;
-	top: 26px;
-	right: 383px;
+	top: 12px;
+	right: 11px;
+	transition: all .3s linear;
 }
 
-.subset>.subset2 {
-	width: 75px;
+.myTB:hover .trigon,
+.myCollect:hover .trigon,
+.merchant:hover .trigon {
+	transform: rotate(180deg);
 	position: absolute;
-	top: 26px;
-	right: 245px;
+	top: 9px;
+	right: 11px;
 }
-
-.subset>.subset3 {
-	width: 165px;
-	height: 215px;
+.webNav:hover .trigon {
+	transform: rotate(180deg);
 	position: absolute;
-	top: 26px;
-	right: 139px;
-	z-index: 9;
+	top: 9px;
+	right: 5px;
 }
-
-.subset>.subset3>img {
-	padding: 7px;
-}
-.subset>.subset4>ul>li>a,
-.subset>.subset4>ul>li>h3 {
-	color: #000000;
-	padding-right: 7px;
-	padding-left: 5px;
-}
-.subset>.subset4 {
-	width: 125px;
+.web-nav>.trigon {
 	position: absolute;
-	top: 26px;
-	right: 86px;
-	z-index: 9;
+	top: 12px;
+	right: 5px;
 }
 
-.subset>.subset5>table {
-	position: absolute;
-	top: 26px;
-	right: 86px;
-	z-index: 9;
-}
-
-.subset>.subset5>table a {
-	color: #000000;
-}
 /*header*/
 
 .header>.logo>a>img {
@@ -303,6 +443,7 @@ em {
 .allProNav ul li a,
 .collect a {
 	color: #000000;
+	font-size: 15px;
 }
 
 .collect a:hover {
@@ -351,9 +492,12 @@ em {
 	color: #ffffff;
 }
 
-.main-header-leftnav h2 {
+.main-header-leftnav h2 span{
+
+	display: inline-block;
+	height: 26px;
 	line-height: 26px;
-	font-size: 19px;
+	font-size: 18px;
 }
 
 .main-header-leftnav h2>i>img {
@@ -374,34 +518,15 @@ em {
 	padding-top: 17px;
 }
 
-.main-header-leftnav1>i,
-.main-header-leftnav2>i,
-.main-header-leftnav3>i,
-.main-header-leftnav4>i,
-.main-header-leftnav5>i {
-	display: block;
-	float: left;
-	padding-right: 15px;
-	font-size: 20px;
-	color: #ffffff;
-}
-
-.main-header-leftnav1 ul li,
-.main-header-leftnav2 ul li,
-.main-header-leftnav3 ul li,
-.main-header-leftnav4 ul li,
-.main-header-leftnav5 ul li {
+.main-header-leftnav ul li {
 	float: left;
 	padding-top: 10px;
 	padding-right: 10px;
 }
 
-.main-header-leftnav1 ul li a,
-.main-header-leftnav2 ul li a,
-.main-header-leftnav3 ul li a,
-.main-header-leftnav4 ul li a,
-.main-header-leftnav5 ul li a {
+.main-header-leftnav ul li a {
 	color: #ffffff;
+	font-size: 13px;
 }
 
 .main-header-leftnav1:hover,
@@ -412,6 +537,9 @@ em {
 	background-color: #FF1655;
 }
 
+.navHover {
+	background-color: #FF1655;
+}
 
 /*导航里的虚线*/
 
@@ -422,6 +550,76 @@ em {
 }
 
 
+/*左侧导航栏的子菜单*/
+
+.close {
+	font-size: 16px;
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+a.close:hover {
+	color: #999999;
+	text-decoration: none;
+}
+
+.subset {
+	display: block;
+	width: 715px;
+	height: 470px;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	left: 210px;
+	z-index: 99;
+	box-shadow: 2px 10px 15px #ccc;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	visibility: hidden;
+}
+#subset div {
+	width: 50%;
+}
+#subset a {
+	color: #999999;
+	display: inline-block;
+	padding: 0 7px 0 10px;
+	margin-top: 10px;
+	border-left: 1px solid #d9d9d9;
+	font-size: 10px;
+	overflow: hidden;
+}
+#subset p {
+	color: #000000;
+	font-weight: 900;
+	font-size: 13px;
+	padding-bottom: 10px
+}
+#subset>div{
+	width: 313px;
+	float: left;
+	margin: 20px 0px 0px 22px;
+}
+
+#subset hr {
+	background-color: #000000;
+	width: 96%;
+	height: 1px;
+	margin-bottom: 10px;
+}
+#subset>a {
+	border: 0;
+	font-size: 16px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+#leftnav:hover #subset{
+	visibility: visible;
+}
 /*banner轮播图*/
 
 .banner {
@@ -436,6 +634,7 @@ em {
 	height: 420px;
 	background-repeat: no-repeat;
 	display: none;
+	transition: all 1s linear;
 }
 
 .slide-active {
